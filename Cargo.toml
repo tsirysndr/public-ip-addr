@@ -1,0 +1,19 @@
+[package]
+name = "public-ip-addr"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/tsirysndr/public-ip-addr"
+license = "MIT"
+readme = "README.md"
+authors = ["Tsiry Sandratraina <tsiry.sndr@aol.com>"]
+categories = ["network-programming"]
+keywords = ["public", "ip", "address", "web", "network"]
+description = "A simple library for getting your public IP address"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0.152"
+serde_json = "1.0.91"
+surf = { version = "2.3.2", features = ["h1-client-rustls"], default-features = false}
+tokio = { version = "1.24.2", features = ["tokio-macros", "macros", "rt", "rt-multi-thread"] }
